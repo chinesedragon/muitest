@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="MuiTest1.Content.ModernButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel HorizontalAlignment="Left">
+                <StackPanel.Resources>
+                    <PathGeometry x:Key="HomeIconData">F1 M 15.0021,35.0049L 15.0021,33.0046L 15.0021,24.2034L 14.002,25.0035L 12.0017,22.0031L 24.0033,13.0018L 29.004,16.7523L 29.004,14.002L 31.0043,13.502L 31.0043,18.2525L 36.005,22.0031L 34.0047,25.0035L 33.0046,24.2034L 33.0046,33.0046L 33.0046,35.0049L 15.0021,35.0049 Z M 24.0033,17.0024L 17.0024,22.6032L 17.0024,33.0046L 21.0029,33.0046L 21.0029,27.0038L 27.0038,27.0038L 27.0038,33.0046L 31.0043,33.0046L 31.0043,22.6032L 24.0033,17.0024 Z</PathGeometry>
+                </StackPanel.Resources>
+
+                <TextBlock Text="ModernButton" Style="{StaticResource Heading2}" Margin="0,0,0,8"/>
+                <mui:BBCodeBlock BBCode="图标由[url=http://modernuiicons.com/]Modern UI Icons[/url]提供."/>
+                <mui:ModernButton Content="modern button" IconData="{StaticResource HomeIconData}" Margin="0,0,0,4"/>
+                <mui:ModernButton Content="disabled modern button" IconData="{StaticResource HomeIconData}" IsEnabled="False" Margin="0,0,0,16"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

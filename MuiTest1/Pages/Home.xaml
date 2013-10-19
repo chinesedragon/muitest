@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="MuiTest1.Pages.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+                <TextBlock Text="MODERN UI FOR WPF" Style="{StaticResource Heading1}" Margin="0,0,0,8"/>
+                <mui:BBCodeBlock BBCode="[b]Modern UI For WPF[/b],是一个让你的程序看起来像Modern UI风格的一系列的控件和风格集成的框架。&#13;&#10;&#13;&#10;这个开源工程是[url=http]XAML SPY[/url]的一部分。" Margin="0,0,0,32"/>
+                <TextBlock Text="风格样式" Style="{StaticResource Heading2}" Margin="0,15,0,0"/>
+                <mui:BBCodeBlock BBCode="可以动态地改变Modern UI窗口的风格。访问[url=/Pages/Settings.xaml]设置[/url]页面改变窗口风格。"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
