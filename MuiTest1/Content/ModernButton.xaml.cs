@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace MuiTest1.Content
 {
@@ -23,6 +24,32 @@ namespace MuiTest1.Content
         public ModernButton()
         {
             InitializeComponent();
+
+            //找到全部嵌入的xaml icon文件
+            var assembly = GetType().Assembly;
+            var iconResourceNames = from name in assembly.GetManifestResourceNames()
+                                    where name.StartsWith("MuiTest1.assets.appbar.")
+                                    select name;
+
+            foreach (var name in iconResourceNames)
+            {
+                using (var stream = assembly.GetManifestResourceStream(name))
+                {
+                    var doc = XDocument.Load(stream);
+
+                    var path = doc.Root.Element("{http://schemas.microsoft.com/winfx/2006/xaml/presentation}Path");
+                    if (path != null)
+                    {
+                        var data = (string)path.Attribute("Data");
+
+                        ButtonPanel.Children.Add(new FirstFloor.ModernUI.Windows.Controls.ModernButton
+                            {
+                                IconData = PathGeometry.Parse(data),
+                                Margin = new Thickness(0, 0, 0, 8)
+                            });
+                    }
+                }
+            }
         }
     }
 }

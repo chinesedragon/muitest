@@ -17,6 +17,26 @@
                 <mui:BBCodeBlock BBCode="图标由[url=http://modernuiicons.com/]Modern UI Icons[/url]提供."/>
                 <mui:ModernButton Content="modern button" IconData="{StaticResource HomeIconData}" Margin="0,0,0,4"/>
                 <mui:ModernButton Content="disabled modern button" IconData="{StaticResource HomeIconData}" IsEnabled="False" Margin="0,0,0,16"/>
+                
+                <WrapPanel x:Name="ButtonPanel" Margin="0,0,0,32"/>
+                
+                <TextBlock Text="Variable Sizes" Style="{StaticResource Heading2}" Margin="0,0,0,8"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <StackPanel.Resources>
+                        <Style TargetType="mui:ModernButton">
+                            <Setter Property="IconData" Value="{StaticResource HomeIconData}"/>
+                            <Setter Property="Margin" Value="0,0,8,0"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <mui:ModernButton EllipseDiameter="16" IconWidth="8" IconHeight="8"/>
+                    <mui:ModernButton />
+                    <mui:ModernButton EllipseDiameter="24" IconWidth="14" IconHeight="14"/>
+                    <mui:ModernButton EllipseDiameter="32" IconWidth="20" IconHeight="20"/>
+                    <mui:ModernButton EllipseDiameter="48" IconWidth="30" IconHeight="30" EllipseStrokeThickness="2"/>
+                    <mui:ModernButton EllipseDiameter="64" IconWidth="42" IconHeight="42" EllipseStrokeThickness="2"/>
+                    <mui:ModernButton EllipseDiameter="96" IconWidth="64" IconHeight="64" EllipseStrokeThickness="2"/>
+                </StackPanel>
             </StackPanel>
         </ScrollViewer>
     </Grid>

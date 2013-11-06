@@ -12,11 +12,11 @@
             <mui:ModernTab.Links >
                 <!-- TODO: set @Source -->
                 <mui:Link DisplayName="BBCodeBlock" Source="/Content/ModernBBCode.xaml"/>
-                <mui:Link DisplayName="ModernButton" />
-                <mui:Link DisplayName="ModernDialog" />
-                <mui:Link DisplayName="ModernFrame" />
-                <mui:Link DisplayName="ModernMenu" />
-                <mui:Link DisplayName="ModernWindow" />
+                <mui:Link DisplayName="ModernButton" Source="/Content/ModernButton.xaml"/>
+                <mui:Link DisplayName="ModernDialog" Source="/Content/ModernDialogControl.xaml"/>
+                <mui:Link DisplayName="ModernFrame" Source="/Content/ModernFrameControl.xaml"/>
+                <mui:Link DisplayName="ModernMenu" Source="/Content/ModernMenuControl.xaml"/>
+                <mui:Link DisplayName="ModernWindow" Source="/Content/ModernWindowControl.xaml"/>
             </mui:ModernTab.Links>
         </mui:ModernTab>
     </Grid>
