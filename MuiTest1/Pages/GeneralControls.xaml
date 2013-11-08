@@ -12,13 +12,13 @@
             <mui:ModernTab.Links>
                 <!-- TODO: set @Source -->
                 <mui:Link DisplayName="按钮" Source="/Content/GeneralButtons.xaml"/>
-                <mui:Link DisplayName="DATAGRID" />
-                <mui:Link DisplayName="日期时间控件" />
-                <mui:Link DisplayName="ITEMSCONTROL" />
-                <mui:Link DisplayName="进度条" />
-                <mui:Link DisplayName="拖动滑块" />
-                <mui:Link DisplayName="文字" />
-                <mui:Link DisplayName="表单" />
+                <mui:Link DisplayName="DATAGRID" Source="/Content/GeneralDatagridControl.xaml"/>
+                <mui:Link DisplayName="日期时间控件" Source="/Content/GeneralDateControl.xaml"/>
+                <mui:Link DisplayName="ITEMSCONTROL" Source="/Content/GeneralItemsControl.xaml"/>
+                <mui:Link DisplayName="进度条" Source="/Content/GeneralProcessbarControl.xaml"/>
+                <mui:Link DisplayName="拖动滑块" Source="/Content/GeneralSliderControl.xaml"/>
+                <mui:Link DisplayName="文字" Source="/Content/GeneralFontControl.xaml"/>
+                <mui:Link DisplayName="表单" Source="/Content/GeneralSampleForm.xaml"/>
             </mui:ModernTab.Links>
         </mui:ModernTab>
     </Grid>

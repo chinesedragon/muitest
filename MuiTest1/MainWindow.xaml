@@ -27,6 +27,12 @@
                 <mui:Link DisplayName="现代风格" Source="/Pages/ModernControls.xaml"/>                
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="高级">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="导航" Source="/Pages/Navigation.xaml"/>
+                <mui:Link DisplayName="Content Loader" Source="/Pages/ContentLoader.xaml"/>
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
         <mui:LinkGroup DisplayName="设置" GroupName="settings">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="窗口风格" Source="/Pages/Settings.xaml" />

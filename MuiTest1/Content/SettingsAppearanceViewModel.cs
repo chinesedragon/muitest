@@ -66,6 +66,12 @@ namespace MuiTest1.Content
             this.themes.Add(new Link { DisplayName = "dark", Source = AppearanceManager.DarkThemeSource });
             this.themes.Add(new Link { DisplayName = "light", Source = AppearanceManager.LightThemeSource });
 
+            // add additional themes
+            this.themes.Add(new Link { DisplayName = "Hello Kitty", Source = new Uri("/MuiTest1;component/assets/ModernUI.HelloKitty.xaml", UriKind.Relative) });
+            this.themes.Add(new Link { DisplayName = "Love", Source = new Uri("/MuiTest1;component/Assets/ModernUI.Love.xaml", UriKind.Relative) });
+            this.themes.Add(new Link { DisplayName = "Snowflakes", Source = new Uri("/MuiTest1;component/Assets/ModernUI.Snawflakes.xaml", UriKind.Relative) });
+            this.themes.Add(new Link { DisplayName = "Bing Image", Source = new Uri("/MuiTest1;component/Assets/ModernUI.BingImage.xaml", UriKind.Relative) });
+
             this.SelectedFontSize = AppearanceManager.Current.FontSize == FontSize.Large ? FontLarge : FontSmall;
             SyncThemeAndColor();
 

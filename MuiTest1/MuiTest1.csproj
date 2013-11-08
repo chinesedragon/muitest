@@ -37,6 +37,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -119,7 +120,51 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Page Include="assets\ModernUI.BingImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="assets\ModernUI.HelloKitty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="assets\ModernUI.Love.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="assets\ModernUI.Snawflakes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Content\GeneralButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\GeneralDatagridControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\GeneralDateControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\GeneralFontControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\GeneralItemsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\GeneralProcessbarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\GeneralSampleForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\GeneralSliderControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -171,8 +216,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="assets\BingImage.cs" />
     <Compile Include="Content\GeneralButtons.xaml.cs">
       <DependentUpon>GeneralButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\GeneralDatagridControl.xaml.cs">
+      <DependentUpon>GeneralDatagridControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\GeneralDateControl.xaml.cs">
+      <DependentUpon>GeneralDateControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\GeneralFontControl.xaml.cs">
+      <DependentUpon>GeneralFontControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\GeneralItemsControl.xaml.cs">
+      <DependentUpon>GeneralItemsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\GeneralProcessbarControl.xaml.cs">
+      <DependentUpon>GeneralProcessbarControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\GeneralSampleForm.xaml.cs">
+      <DependentUpon>GeneralSampleForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\GeneralSampleFormViewmodel.cs" />
+    <Compile Include="Content\GeneralSliderControl.xaml.cs">
+      <DependentUpon>GeneralSliderControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Content\Item1.xaml.cs">
       <DependentUpon>Item1.xaml</DependentUpon>
@@ -226,6 +294,10 @@
       <DependentUpon>SettingsAppearance.xaml</DependentUpon>
     </Compile>
     <Compile Include="Content\SettingsAppearanceViewModel.cs" />
+    <Page Include="Pages\ContentLoader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\GeneralControls.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -258,10 +330,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Navigation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="Pages\ContentLoader.xaml.cs">
+      <DependentUpon>ContentLoader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomCommandDisableCommand.cs" />
+    <Compile Include="Pages\CustomCommandMsgBox.cs" />
+    <Compile Include="Pages\CustomCommandParamterMsgBox.cs" />
+    <Compile Include="Pages\FlickrImageLoader.cs" />
     <Compile Include="Pages\GeneralControls.xaml.cs">
       <DependentUpon>GeneralControls.xaml</DependentUpon>
     </Compile>
@@ -286,6 +369,9 @@
     <Compile Include="Pages\ModernControls.xaml.cs">
       <DependentUpon>ModernControls.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Navigation.xaml.cs">
+      <DependentUpon>Navigation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
@@ -294,7 +380,15 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="assets\background.kitty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\background.love.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\background.snowflakes.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

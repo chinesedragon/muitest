@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="MuiTest1.Pages.Navigation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:app="clr-namespace:MuiTest1.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <Grid.Resources>
+            <Style TargetType="{x:Type mui:BBCodeBlock}">
+                <Setter Property="LinkNavigator">
+                    <Setter.Value>
+                        <mui:DefaultLinkNavigator>
+                            <mui:DefaultLinkNavigator.Commands>
+                                <app:CustomCommandMsgBox x:Key="cmd://MsgBox"/>
+                                <app:CustomCommandParamterMsgBox x:Key="cmd://ParameterMsgBox"/>
+                                <app:CustomCommandDisableCommand x:Key="cmd://DisableCommand"/>
+                            </mui:DefaultLinkNavigator.Commands>
+                        </mui:DefaultLinkNavigator>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <ScrollViewer>
+            <StackPanel>
+                <TextBlock Text="Navigation Sample" Style="{StaticResource Heading2}" Margin="0,0,0,16"/>
+                
+                <TextBlock Text="Content Navigation" Style="{StaticResource Heading2}" Margin="0,0,0,8"/>
+                <mui:BBCodeBlock BBCode=">> 导航到[url=/Pages/Home.xaml]介绍[/url]页面"/>
+                <mui:BBCodeBlock BBCode=">> 在默认浏览器中导航到[url=http://www.baidu.com]百度[/url]"/>
+                <mui:BBCodeBlock BBCode=">> 向[url=mailto:luoshupeng@qq.com?subject=邮件;body=这是BBCode邮件]罗树鹏[/url]发邮件" Margin="0,0,0,16"/>
+                
+                <TextBlock Text="Buitin Commands" Style="{StaticResource Heading2}" Margin="0,0,0,8"/>
+                <mui:BBCodeBlock BBCode=">> 设置为[url=cmd://darktheme]黑主题[/url]，[url=cmd://lighttheme]亮主题[/url]或者[url=cmd://settheme|/MuiTest1;component/Assets/ModernUI.HelloKitty.xaml]自定义主题[/url]"/>
+                <mui:BBCodeBlock BBCode=">> 设置字体为[url=cmd://largefontsize]Large[/url]或者[url=cmd://smallfontsize]Small[/url]"/>
+                <mui:BBCodeBlock BBCode=">> 改变边框颜色为[url=cmd://accentcolor|#ff4500]Orange[/url], [url=cmd://accentcolor|#339933]Green[/url]或者[url=cmd://accentcolor|#9a0213]任意颜色[/url]"/>
+                <mui:BBCodeBlock BBCode=">> 用[url=cmd://browseback]后退[/url]命令浏览前一页面" Margin="0,0,0,16"/>
+                
+                <TextBlock Text="Custom Commands" Style="{StaticResource Heading2}" Margin="0,0,0,8"/>
+                <mui:BBCodeBlock BBCode="自定义[url=cmd://MsgBox]对话框[/url]"/>
+                <mui:BBCodeBlock BBCode="带参数的自定义[url=cmd://ParameterMsgBox|somevalue这是中文字体]对话框[/url]"/>
+                <mui:BBCodeBlock BBCode="被禁用的[url=cmd://DisableCommand]自定义命令[/url]"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
